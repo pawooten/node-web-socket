@@ -4,12 +4,16 @@ import {Server} from "ws";
 
 const app = express();
 
+
+// Serve http content
+app.get('/', (request, response) => {
+  console.log('get / ');
+    response.sendFile(path.join(__dirname, '../static/index.html'));
+});
+
 app.use('/', express.static(path.join(__dirname, '..', 'static')));
 app.use('/node_modules', express.static(path.join(__dirname, '..', 'node_modules')));
 
-// app.get('/', (request, response) => {
-//     response.sendFile(path.join(__dirname, '../static/hello-world.html'));
-// });
 
 const server = app.listen(8000, "localhost", () => {
     const {address, port} = server.address();
