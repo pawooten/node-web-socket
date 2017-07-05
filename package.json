@@ -4,6 +4,8 @@
   "description": "An example application demonstrating pushing data from the web server to the client using web sockets",
   "main": "index.js",
   "scripts": {
+    "start": "node build/web-socket-server.js",
+    "start-dev": "nodemon build/web-socket-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
