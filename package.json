@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/pawooten/node-web-socket/issues"
   },
-  "homepage": "https://github.com/pawooten/node-web-socket#readme"
+  "homepage": "https://github.com/pawooten/node-web-socket#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "ws": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^3.0.0",
+    "nodemon": "^1.11.0",
+    "typescript": "^2.4.1"
+  }
 }
