@@ -2,12 +2,23 @@
 <html>
   <head>
     <title>node-web-socket</title>
-    <!--The below script block was added to test that express was properly initialized to serve static content-->
-    <!--<script src='/node_modules/abbrev/abbrev.js' />-->
+    <script src='/node_modules/jquery/dist/jquery.js'></script>
+    <script type="text/javascript">
+      $(function() {
+        var ws = new WebSocket( "ws://localhost:8085");
+        ws.onmessage = function(event) {
+          $("#messageSpan").text( event.data );
+        };
+        ws.onerror = function(event) {
+          console.log("Error ", event);
+        };
+      });
+    </script>
   </head>
   <body>
     <form>
       <h1>node-web-socket</h1>
+      <span id="messageSpan"></span>
     </form>
   </body>
 </html>

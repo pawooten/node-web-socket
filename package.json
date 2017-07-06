@@ -20,6 +20,7 @@
   "homepage": "https://github.com/pawooten/node-web-socket#readme",
   "dependencies": {
     "express": "^4.15.3",
+    "jquery": "^3.2.1",
     "ws": "^3.0.0"
   },
   "devDependencies": {
